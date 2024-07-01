@@ -1,10 +1,10 @@
-package com.davidblog.tag_service;
+package com.davidblog.comments;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class TagServiceApplicationTests {
+class CommentServiceApplicationTests {
 
 	@Test
 	void contextLoads() {

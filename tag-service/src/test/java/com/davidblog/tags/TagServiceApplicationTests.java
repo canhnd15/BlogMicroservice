@@ -1,10 +1,10 @@
-package com.davidblog.notification_service;
+package com.davidblog.tags;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class NotificationServiceApplicationTests {
+class TagServiceApplicationTests {
 
 	@Test
 	void contextLoads() {

@@ -1,4 +1,4 @@
-package com.davidblog.comment_service;
+package com.davidblog.comments;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

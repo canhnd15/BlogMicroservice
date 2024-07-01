@@ -1,13 +1,13 @@
-package com.davidblog.post_service;
+package com.davidblog.tags;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class PostServiceApplication {
+public class TagServiceApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(PostServiceApplication.class, args);
+		SpringApplication.run(TagServiceApplication.class, args);
 	}
 
 }
