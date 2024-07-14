@@ -1,9 +1,10 @@
-package com.davidblog.general.dtos;
+package com.davidblog.posts.dtos;
 
 import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.Date;
 import java.util.List;
 
 @Setter
@@ -15,8 +16,8 @@ public class NewPostSdo {
     private String status;
     private String content;
     private String slug;
-    private String createAt;
+    private Date createAt;
     private String updateAt;
-    private UserResponseSdo user;
+//    private UserResponseSdo user;
     private List<TagResponseSdo> tags;
 }

@@ -1,11 +1,11 @@
-package com.davidblog.general.dtos;
+package com.davidblog.posts.dtos;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import lombok.Builder;
 import lombok.Data;
 
-import java.util.List;
+import java.util.Set;
 
 @Data
 @Builder
@@ -27,5 +27,5 @@ public class NewPostSdi {
     private Long userId;
 
     @NotNull(message = "Post is required at least one tag.")
-    private List<String> tags;
+    private Set<Long> tagIds;
 }

@@ -37,7 +37,4 @@ public class Post {
 
     @Column(name = "updated_at")
     private Date updatedAt;
-
-    @Column(name = "tag_id")
-    private Long tagId;
 }

@@ -1,4 +1,4 @@
-package com.davidblog.general.common;
+package com.davidblog.posts.common;
 
 public class PostStatus {
     public final static String CREATED = "CREATED";

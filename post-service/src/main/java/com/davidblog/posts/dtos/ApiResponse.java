@@ -1,4 +1,4 @@
-package com.davidblog.general.dtos;
+package com.davidblog.posts.dtos;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
