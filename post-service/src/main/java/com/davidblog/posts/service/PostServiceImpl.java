@@ -17,7 +17,7 @@ import java.util.Set;
 
 @Service
 @RequiredArgsConstructor
-public class PostServiceImpl implements PostService{
+public class PostServiceImpl implements PostService {
     private final PostRepository postRepository;
 
     @Override
@@ -46,9 +46,18 @@ public class PostServiceImpl implements PostService{
                 .build();
 
         return ResponseEntity.ok(ApiResponse.builder()
-                        .message("Add new post successfully!")
-                        .status(ResponseCode.SUCCESS)
-                        .data(sdo)
+                .message("Add new post successfully!")
+                .status(ResponseCode.SUCCESS)
+                .data(sdo)
+                .build());
+    }
+
+    @Override
+    public ResponseEntity<ApiResponse<?>> getAllPosts() {
+        return ResponseEntity.ok(ApiResponse.builder()
+                .message("Get all posts successfully!")
+                .status(ResponseCode.SUCCESS)
+                .data(postRepository.findAll())
                 .build());
     }
 }

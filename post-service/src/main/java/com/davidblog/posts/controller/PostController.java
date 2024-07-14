@@ -13,8 +13,13 @@ import org.springframework.web.bind.annotation.*;
 public class PostController {
     private final PostService postService;
 
-    @PostMapping("/")
+    @PostMapping
     public ResponseEntity<ApiResponse<?>> addNewPost(@RequestBody NewPostSdi sdi) {
         return postService.addNewPost(sdi);
+    }
+
+    @GetMapping
+    public ResponseEntity<ApiResponse<?>> getAllPost() {
+        return postService.getAllPosts();
     }
 }

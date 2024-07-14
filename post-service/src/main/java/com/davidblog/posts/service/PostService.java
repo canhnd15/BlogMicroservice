@@ -6,4 +6,5 @@ import org.springframework.http.ResponseEntity;
 
 public interface PostService {
     ResponseEntity<ApiResponse<?>> addNewPost(NewPostSdi sdi);
+    ResponseEntity<ApiResponse<?>> getAllPosts();
 }
