@@ -9,8 +9,8 @@ import java.util.Date;
 @NoArgsConstructor
 @Setter
 @Getter
-@Entity
 @Builder
+@Entity(name = "Comment")
 @Table(name = "comments")
 public class Comment {
     @Id

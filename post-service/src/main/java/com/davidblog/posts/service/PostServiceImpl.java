@@ -13,11 +13,11 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Date;
+import java.util.List;
 
 @Service
 @RequiredArgsConstructor
 public class PostServiceImpl implements PostService{
-
     private final PostRepository postRepository;
 
     @Override
@@ -47,5 +47,26 @@ public class PostServiceImpl implements PostService{
                         .status(ResponseCode.SUCCESS)
                         .data(sdo)
                 .build());
+    }
+
+    @Override
+    public ResponseEntity<ApiResponse<?>> getAllPosts() {
+        return ResponseEntity.ok(ApiResponse.builder()
+                .message("Get all posts successfully!")
+                .status(ResponseCode.SUCCESS)
+                .data(postRepository.findAll())
+                .build());
+    }
+
+    @Override
+    public ResponseEntity<ApiResponse<?>> getPostWithPagination(int pageSize, int pageNumber) {
+        List<Post> posts = postRepository.getPendingPostWithPagination(pageSize, pageNumber);
+        return ResponseEntity.ok(
+                ApiResponse.builder()
+                        .message("Get posts by pagination successfully!")
+                        .data(posts)
+                        .status(ResponseCode.SUCCESS)
+                        .build()
+        );
     }
 }
