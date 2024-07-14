@@ -1,10 +1,8 @@
 server:
   port: 8222
-
 eureka:
   client:
     register-with-eureka: false
-
 spring:
   application:
     name: gateway
@@ -15,25 +13,23 @@ spring:
           enabled: true
       routes:
         - id: post-service
-#          uri: http://localhost:8090
           uri: lb://POST-SERVICE
           predicates:
             - Path=/api/v1/posts/**
         - id: comment-service
-          uri: http://localhost:8091
+          uri: lb://COMMENT-SERVICE
           predicates:
             - Path=/api/v1/comments/**
         - id: tag-service
-          uri: http://localhost:8092
+          uri: lb://TAG-SERVICE
           predicates:
             - Path=/api/v1/tags/**
         - id: user-service
-#          uri: http://localhost:8093
           uri: lb://USER-SERVICE
           predicates:
             - Path=/api/v1/users/**
         - id: notification-service
-          uri: http://localhost:8094
+          uri: lb://NOTIFICATION-SERVICE
           predicates:
             - Path=/api/v1/notifications/**
 

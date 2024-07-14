@@ -22,4 +22,9 @@ public class PostController {
     public ResponseEntity<ApiResponse<?>> getAllPost() {
         return postService.getAllPosts();
     }
+
+    @GetMapping("/pagination/")
+    public ResponseEntity<ApiResponse<?>> getAllPostWithPagination(@RequestParam int pageSize, @RequestParam int pageNumber) {
+        return postService.getPostWithPagination(pageSize, pageNumber);
+    }
 }

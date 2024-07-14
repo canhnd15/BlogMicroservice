@@ -13,6 +13,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import java.util.Date;
+import java.util.List;
 import java.util.Set;
 
 @Service
@@ -59,5 +60,17 @@ public class PostServiceImpl implements PostService {
                 .status(ResponseCode.SUCCESS)
                 .data(postRepository.findAll())
                 .build());
+    }
+
+    @Override
+    public ResponseEntity<ApiResponse<?>> getPostWithPagination(int pageSize, int pageNumber) {
+        List<Post> posts = postRepository.getPendingPostWithPagination(pageSize, pageNumber);
+        return ResponseEntity.ok(
+                ApiResponse.builder()
+                        .message("Get posts by pagination successfully!")
+                        .data(posts)
+                        .status(ResponseCode.SUCCESS)
+                        .build()
+        );
     }
 }
