@@ -10,7 +10,7 @@ import java.util.Date;
 @Setter
 @Getter
 @Builder
-@Entity
+@Entity(name = "Post")
 @Table(name = "posts")
 public class Post {
     @Id
@@ -37,7 +37,4 @@ public class Post {
 
     @Column(name = "updated_at")
     private Date updatedAt;
-
-    @Column(name = "tag_id")
-    private Long tagId;
 }
