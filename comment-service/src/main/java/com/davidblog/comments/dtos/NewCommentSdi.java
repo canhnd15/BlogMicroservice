@@ -14,4 +14,6 @@ public class NewCommentSdi {
 
     @NotNull(message = "Post's Id is required.")
     private Long postId;
+
+    private Long parentId;
 }

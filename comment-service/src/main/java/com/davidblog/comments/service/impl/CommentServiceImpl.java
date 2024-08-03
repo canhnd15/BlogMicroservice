@@ -14,6 +14,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.Date;
 import java.util.List;
+import java.util.Objects;
 
 @Service
 @RequiredArgsConstructor
@@ -26,6 +27,7 @@ public class CommentServiceImpl implements CommentService {
         Comment comment = Comment.builder()
                 .content(sdi.getContent())
                 .postId(sdi.getPostId())
+                .parentId(Objects.nonNull(sdi.getParentId()) ? sdi.getParentId() : null)
                 .createAt(new Date())
                 .build();
 
