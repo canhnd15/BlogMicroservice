@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.davidblog</groupId>
 	<artifactId>post-service</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.0</version>
 	<name>post-service</name>
 	<description>post service for blog app</description>
 	<url/>

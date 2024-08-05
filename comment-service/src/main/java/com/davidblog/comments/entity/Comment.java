@@ -19,6 +19,12 @@ public class Comment {
 
     private String content;
 
+    @Column(name = "post_id")
+    private Long postId;
+
+    @Column(name = "parent_id")
+    private Long parentId;
+
     @Column(name = "created_at")
     private Date createAt;
 
