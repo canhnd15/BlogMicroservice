@@ -37,29 +37,6 @@ services:
     networks:
       - zipkin
 
-  config-server:
-    container_name: config-server
-
-  post-service:
-    container_name: post-service
-    image: post-service:1.0.0
-    depends_on:
-      - postgresql
-    ports:
-      - "8090:8090"
-    networks:
-      - blog-network
-
-  comment-service:
-    container_name: comment-service
-    image: comment-service:1.0.0
-    depends_on:
-      - postgresql
-    ports:
-      - "8091:8091"
-    networks:
-      - blog-network
-
 networks:
   blog-network:
     driver: bridge

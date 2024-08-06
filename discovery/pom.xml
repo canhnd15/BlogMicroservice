@@ -10,8 +10,8 @@
 	</parent>
 	<groupId>com.davidblog</groupId>
 	<artifactId>discovery</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-	<name>discovery</name>
+	<version>1.0.0</version>
+	<name>discovery-server</name>
 	<description>gateway project for blog app</description>
 	<url/>
 	<licenses>

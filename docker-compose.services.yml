@@ -1,0 +1,34 @@
+version: '3.8'
+
+services:
+  post-service:
+    container_name: post-service
+    image: post-service:1.0.0
+    volumes:
+      - app-data:/app/data
+    depends_on:
+      - postgresql
+    ports:
+      - "8090:8090"
+    networks:
+      - blog-network
+
+  comment-service:
+    container_name: comment-service
+    image: comment-service:1.0.0
+    volumes:
+      - app-data:/app/data
+    depends_on:
+      - postgresql
+    ports:
+      - "8091:8091"
+    networks:
+      - blog-network
+
+networks:
+  blog-network:
+    driver: bridge
+
+volumes:
+  app-data:
+    driver: local
